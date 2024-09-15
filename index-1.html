@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linear Search</title>
+</head>
+
+<body>
+  <a href="index.html">Menu</a>
+
+  <h1>Linear Search</h1>
+  <ul>
+    <li>漸進的、一步步的遍歷一個array裡所有的item，尋找目標</li>
+    <li>找到目標會停下來、全部找完會停下來</li>
+    <li>時間複雜度為 O(n)</li>
+  </ul>
+
+  <script>
+    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    // NOTE 找到目標就回傳index，找不到就回傳-1
+
+    function linearSearch(arr, n) {
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === n) return i
+      }
+      return -1
+    }
+
+    console.log('linearSearch(arr, 4):', linearSearch(arr, 4)) // 3
+    console.log('linearSearch(arr, 12):', linearSearch(arr, 12)) // -1
+    console.log('the Big O of linear search is O(n)')
+  </script>
+</body>
+
+</html>
